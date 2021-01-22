@@ -1,0 +1,4 @@
+cutelyst2-dbgsym_3.0-master-1_amd64.ddeb debug optional automatic=yes
+cutelyst2-dev_3.0-master-1_amd64.deb libdevel optional
+cutelyst2_3.0-master-1_amd64.buildinfo libs optional
+cutelyst2_3.0-master-1_amd64.deb libs optional

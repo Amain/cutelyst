@@ -1,0 +1,41 @@
+Allow building on qt < 5.14.2 (similar as https://github.com/KDE/kdevelop/commit/929a7a069239a74a619e653b24afb14e62710aa5)
+Index: cutelyst/Cutelyst/utils.cpp
+===================================================================
+--- cutelyst.orig/Cutelyst/utils.cpp
++++ cutelyst/Cutelyst/utils.cpp
+@@ -77,11 +77,11 @@ QByteArray Utils::buildTable(const QVect
+     QByteArray div = buildTableDivision(columnsSize);
+ 
+     if (!title.isEmpty()) {
+-        out << title << Qt::endl;
++        out << title << ::endl;
+     }
+ 
+     // Top line
+-    out << div << Qt::endl;
++    out << div << ::endl;
+ 
+     if (!headers.isEmpty()) {
+         // header titles
+@@ -94,10 +94,10 @@ QByteArray Utils::buildTable(const QVect
+             out.setFieldWidth(0);
+             out << ' ';
+         }
+-        out << '|' << Qt::endl;
++        out << '|' << ::endl;
+ 
+         // header bottom line
+-        out << div << Qt::endl;
++        out << div << ::endl;
+     }
+ 
+     for (const QStringList &row : table) {
+@@ -111,7 +111,7 @@ QByteArray Utils::buildTable(const QVect
+             out.setFieldWidth(0);
+             out << ' ';
+         }
+-        out << '|' << Qt::endl;
++        out << '|' << ::endl;
+     }
+ 
+     // table bottom line

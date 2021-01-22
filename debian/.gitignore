@@ -1,0 +1,5 @@
+tmp
+cutelyst2
+cutelyst2-dev
+*.log
+debhelper-build-stamp

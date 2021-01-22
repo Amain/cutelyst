@@ -1,0 +1,5 @@
+usr/lib/x86_64-linux-gnu/*.so*
+usr/lib/x86_64-linux-gnu/cutelyst2-plugins/*
+usr/bin/*
+usr/share/man/*
+usr/lib/uwsgi/plugins/*

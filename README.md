@@ -28,7 +28,7 @@ $ cmake --install . -j --prefix <install-base-dir>
 
 ## Notes
 * Tested on Debian 10 (Buster)
-* Tested on Ubuntu 20.04
+* Tested on Ubuntu 20.04 (Focal Fossa)
 * Small patch added to allow building with qt < 5.14.2
 * Following plugins disabled due to build/dependency issues (debian/rules):
   * PLUGIN_VIEW_EMAIL

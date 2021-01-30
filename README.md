@@ -1,6 +1,8 @@
-# Add debian package support
+# Cutelyst - Debian package support
 
-See github releases for binary packages.
+Cutelyst is A Web Framework built on top of Qt, using the simple and elegant approach of Catalyst (Perl) framework. This fork adds Debian package support to Cutelyst. I Debianized Cutelyst in order to be able to build my fork of VirtLyst(https://github.com/Amain/Virtlyst), a libvirt virtualization management web UI, with added Xen support. 
+
+See github releases for Debian/Ubuntu binary packages.
 
 ## Build yourself
 ```bash

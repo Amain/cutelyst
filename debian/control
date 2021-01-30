@@ -1,7 +1,7 @@
 Source: cutelyst2
 Priority: optional
 Maintainer: Johan van Zoomeren <amain@debwrt.net>
-Build-Depends: debhelper-compat (= 12), cmake, g++, qtbase5-dev, uwsgi, uuid-dev, libcap-dev, libzmq3-dev, libpwquality-dev, libmemcached-dev, libjemalloc-dev, libgrantlee5-dev, pkg-config, libvirt-dev, clearsilver-dev, doxygen, graphviz, quilt, qttools5-dev-tools
+Build-Depends: debhelper-compat (= 12), cmake, g++, qtbase5-dev, uwsgi, uuid-dev, libcap-dev, libzmq3-dev, libpwquality-dev, libmemcached-dev, libjemalloc-dev, libgrantlee5-dev, pkg-config, libvirt-dev, clearsilver-dev, doxygen, graphviz, quilt, qttools5-dev-tools, qt5-default, libssl-dev, zlib1g-dev, libpcre-dev
 Standards-Version: 4.4.1
 Section: libs
 Homepage: https://github.com/cutelyst/cutelyst/wiki

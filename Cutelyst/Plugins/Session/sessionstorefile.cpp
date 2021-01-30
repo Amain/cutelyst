@@ -36,9 +36,10 @@ Q_LOGGING_CATEGORY(C_SESSION_FILE, "cutelyst.plugin.sessionfile", QtWarningMsg)
 
 static QVariantHash loadSessionData(Context *c, const QString &sid);
 
+QString SessionStoreFile::sessionDir;
+
 SessionStoreFile::SessionStoreFile(QObject *parent) : SessionStore(parent)
 {
-
 }
 
 SessionStoreFile::~SessionStoreFile()
@@ -81,6 +82,26 @@ bool SessionStoreFile::deleteExpiredSessions(Context *c, quint64 expires)
     return true;
 }
 
+void SessionStoreFile::setSessionDir(const QString &dir)
+{
+    SessionStoreFile::sessionDir = dir;
+}
+
+QString SessionStoreFile::getSessionDir()
+{
+    if(SessionStoreFile::sessionDir.isEmpty()) {
+        return QDir::tempPath()
+               + QLatin1Char('/')
+               + QCoreApplication::applicationName()
+               + QLatin1String("/session/data");
+    } else {
+        return SessionStoreFile::sessionDir;
+    }
+
+
+    return SessionStoreFile::sessionDir;
+}
+
 QVariantHash loadSessionData(Context *c, const QString &sid)
 {
     QVariantHash data;
@@ -90,10 +111,7 @@ QVariantHash loadSessionData(Context *c, const QString &sid)
         return data;
     }
 
-    const static QString root = QDir::tempPath()
-            + QLatin1Char('/')
-            + QCoreApplication::applicationName()
-            + QLatin1String("/session/data");
+    const static QString root = SessionStoreFile::getSessionDir();
 
     auto file = new QFile(root + QLatin1Char('/') + sid, c);
     if (!file->open(QIODevice::ReadWrite)) {

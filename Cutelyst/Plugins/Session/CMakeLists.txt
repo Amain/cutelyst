@@ -8,6 +8,7 @@ set(plugin_session_HEADERS
     sessionstorefile.h
     session.h
     Session
+    SessionStoreFile
 )
 
 add_library(Cutelyst2Qt5Session

@@ -53,6 +53,15 @@ public:
      * Reimplemented from SessionStore::deleteExpiredSessions().
      */
     virtual bool deleteExpiredSessions(Context *c, quint64 expires) final;
+
+    /**
+     * Set session directory
+     */
+    static void setSessionDir(const QString &dir);
+    static QString getSessionDir();
+    
+private:
+    static QString sessionDir;
 };
 
 }

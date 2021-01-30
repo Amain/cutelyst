@@ -5,11 +5,25 @@ Cutelyst is A Web Framework built on top of Qt, using the simple and elegant app
 See github releases for Debian/Ubuntu binary packages.
 
 ## Build yourself
+
+### Debian way
 ```bash
 $ sudo apt-get install build-essential cmake qtbase5-dev uwsgi uuid-dev libcap-dev libzmq3-dev libpwquality-dev libmemcached-dev libjemalloc-dev libgrantlee5-dev pkg-config libvirt-dev clearsilver-dev doxygen graphviz quilt qttools5-dev-tools debhelper-compat qt5-default libssl-dev libpcre-dev zlib1g-dev
 $ git clone https://github.com/Amain/cutelyst
 $ #Update debian package version if you need to in debian/changelog (currently set to 3.0-main1)
 $ dpkg-buildpackage -b -rfakeroot --no-sign
+```
+
+### CMake way
+
+```bash
+$ git clone https://github.com/Amain/cutelyst
+$ cd cutelyst
+$ mkdir build
+$ cd build
+$ cmake ..
+$ cmake --build . -j
+$ cmake --install . -j --prefix <install-base-dir>
 ```
 
 ## Notes
